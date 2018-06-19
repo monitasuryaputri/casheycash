@@ -203,9 +203,10 @@
         <!-- user login dropdown start-->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="images/2.png">
-                <span class="username">John Doe</span>
+                <img alt="" src="images/4.png">
+                <span class="username"><?php echo $_SESSION['nama_user']; ?></span>
                 <b class="caret"></b>
+                
             </a>
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
