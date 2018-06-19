@@ -16,7 +16,7 @@
   
           if($status){
             $alert ="Proses registrasi berhasil.";
-            header('Location: ');
+            header('Location: index.php');
           }else{
             $alert="Proses registrasi gagal.";
           }

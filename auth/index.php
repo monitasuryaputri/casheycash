@@ -17,7 +17,7 @@ if (isset($_POST['submit'])){
     $data = mysqli_fetch_assoc($data);
     $_SESSION['nama_user'] = $data['nama'];
     $_SESSION['login_user'] = $email;
-    header('Location:../dashboard');
+    header('Location:../usertemp/index.php');
   }
   else{
  echo   $alert ="email atau password salah.";
