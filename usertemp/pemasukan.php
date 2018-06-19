@@ -59,18 +59,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <th data-title="DOB">Waktu</th>
             <th width="200px">Aksi</th>  
         </tr>
-        <?php
-            $sql = "SELECT sumber, nominal, waktu FROM pemasukan WHERE email='".$_SESSION['login_user']."' order by id_pemasukan";
-            $data = mysqli_query($link, $sql);
-            //while ($rs = mysqli_fetch_array ($query)) { karena udah ada loop yang di bawah ini ngga perlu lagi. 
-            //karena jadinya ada 2 loop tapi yang kita pakai untuk keperluan ini (nampilin datanya) cukup 1 aja
-            // kebetulan untuk kasus yang ini ya. tapi untuk kasus  yang lain bisa jadi butuh 2 tergantung algorima nya
-            ?>
-       
-        <?php
-          for ($i = 1; $row = mysqli_fetch_assoc($data); $i++) :
+        <?php 
+    $q = "SELECT Id_pemasukan, sumber, nominal, time FROM pemasukan WHERE email='".$_SESSION['login_user']."' order by Id_pemasukan desc";
+    $query = mysqli_query($link, $q);
+    while ($rs = mysqli_fetch_array ($query)) {
         ?>
-                <tr data-expanded="true">
+                                        <tr>
+                                            <td><?php echo $rs['Id_pemasukan']; ?></td>
+                                            <td><?php echo $rs['sumber']; ?></td>
+                                            <td><?php echo $rs['nominal']; ?></td>
+                                            <td><?php echo $rs['time']; ?></td>
+                                            <td>
+                                            <div class="btn-group btn-group-justified">
+                                                <a href="#" class="btn btn-primary">Edit</a>
+                                                <a href="#" class="btn btn-danger">Delete</a>
+                                            </div>
+                                            </td>
+                                        </tr>
+                                        <?php
+    }
+    ?>
+                <!-- <tr data-expanded="true">
                     <td  align="center"><?php echo $i; ?></td>
                     <td style="text-align: left;"><?php echo $row['sumber']; ?></td>
                     <td style="text-align: left;"><?php echo $row['nominal']; ?></td>
@@ -80,10 +89,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="#" class="btn btn-primary ">Edit</a>              
                     <a onclick="return confirm('Are you sure you want to delete this entry?')" href="#" class="btn btn-danger">Hapus</a></td>
                     </div>     
-                </tr>
-          <?php             endfor; ?>
-
-      
+                </tr> -->
+     
       </table>
     </div>
   </div>

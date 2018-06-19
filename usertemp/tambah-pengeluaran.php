@@ -38,7 +38,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="table-agile-info">
  <div class="panel panel-default">
     <div class="panel-heading">
-     Data Pemasukan
+     Data Pengeluaran
     </div>
     <div>
       <table class="table" ui-jq="footable" ui-options='{
@@ -60,12 +60,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="card">
                             <div class="card-body"> 
                                 <div class="basic-form">
-                                    <form class="form-horizontal" method="post" action="simpanPemasukan.php">
+                                    <form method="post" class="form-horizontal" action="simpanPengeluaran.php">
                                         <div class="form-group">
                                             <div class="row">
-                                                <label class="col-sm-2 control-label">Sumber</label>
+                                                <label class="col-sm-2 control-label">Keperluan</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="sumber">
+                                                    <input type="text" class="form-control" name="keperluan">
                                                 </div>
                                             </div>
                                         </div>
@@ -79,6 +79,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                         <input type="text" placeholder="Search Round" name="nominal" class="form-control">
                                                     </div>
 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <label class="col-sm-2 control-label">Kategori</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="Id_kategori">
                                                 </div>
                                             </div>
                                         </div>
@@ -105,6 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!-- End PAge Content -->
             </div>
             <!-- End Container fluid  -->
+            
                 <!-- <tr data-expanded="true">
                     <td  align="center"><?php echo $i; ?></td>
                     <td style="text-align: left;"><?php echo $row['sumber']; ?></td>

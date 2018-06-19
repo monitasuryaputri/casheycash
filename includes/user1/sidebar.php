@@ -43,8 +43,8 @@
                         <span>Pengeluaran</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="basic_table.php">Semua Pengeluaran</a></li>
-                        <li><a href="responsive_table.html">Tambah Pengeluaran</a></li>
+                        <li><a href="pengeluaran.php">Semua Pengeluaran</a></li>
+                        <li><a href="tambah-pengeluaran.php">Tambah Pengeluaran</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">

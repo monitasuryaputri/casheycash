@@ -52,59 +52,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           "enabled": true
         }}'>
         
-               <!-- Container fluid  -->
-               <div class="container-fluid">
-                <!-- Start Page Content -->
-                <div class="row">
-                    <div class="col-9" style="margin:0 auto">
-                        <div class="card">
-                            <div class="card-body"> 
-                                <div class="basic-form">
-                                    <form class="form-horizontal" method="post" action="simpanPemasukan.php">
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <label class="col-sm-2 control-label">Sumber</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" name="sumber">
-                                                </div>
+          <tr >
+            <th>No</th>
+            <th width="400px">Keperluan</th>
+            <th>Kategori</th>
+            <th data-title="DOB">Nominal</th>
+            <th width="200px">Waktu</th>  
+            <th width="150px">Aksi</th> 
+        </tr>
+        <?php
+    $q = "SELECT Id_pengeluaran, keperluan, nominal, Id_kategori, time FROM pengeluaran WHERE email='".$_SESSION['login_user']."' order by Id_pengeluaran desc";
+    $query = mysqli_query($link, $q);
+    while ($rs = mysqli_fetch_array ($query)) {
+        ?>
+    
+                                        <tr>
+                                            <td><?php echo $rs['Id_pengeluaran']; ?></td>
+                                            <td><?php echo $rs['keperluan']; ?></td>
+                                            <td><?php echo $rs['Id_kategori']; ?></td>
+                                            <td><?php echo $rs['nominal']; ?></td>
+                                            <td><?php echo $rs['time']; ?></td>
+                                            <td>
+                                            <div class="btn-group btn-group-justified">
+                                                <a href="#" class="btn btn-primary">Edit</a>
+                                                <a href="#" class="btn btn-danger">Delete</a>
                                             </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <label class="col-sm-2 control-label">Nominal</label>
-                                                <div class="col-sm-10">
-                                                    <div class="input-group">
-                                                        <span class="input-group-btn">Rp</span>
-                                                        <input type="text" placeholder="Search Round" name="nominal" class="form-control">
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <label class="col-sm-2 control-label">Waktu</label>
-                                                <div class="col-sm-10">
-                                                    <input type="date" class="form-control" name="time">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="pull-right">
-                                            <input type="submit" value="Submit" name="Submit" />
-                                           
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End PAge Content -->
-            </div>
-            <!-- End Container fluid  -->
+                                            </td>
+                                        </tr>
+                                        <?php
+    }
+    ?>
                 <!-- <tr data-expanded="true">
                     <td  align="center"><?php echo $i; ?></td>
                     <td style="text-align: left;"><?php echo $row['sumber']; ?></td>
