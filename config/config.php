@@ -1,6 +1,6 @@
 <?php
 $config = [
-  'site_url'=> 'http://localhost/belajar1/'
+  'site_url'=> 'http://localhost/casheycash/'
 ];
 
 ?>

@@ -1,8 +1,15 @@
+<?php 
+
+    session_start();
+
+    include '../config/config.php';
+    require_once "../config/koneksi.php";
+?>
 <header class="header fixed-top clearfix">
 <!--logo start-->
 <div class="brand">
-    <a href="index.html" class="logo">
-        VISITORS
+    <a href="index.php " class="logo" font-size=5>
+        CasheyCash
     </a>
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars"></div>
@@ -203,7 +210,7 @@
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                <li><a href=<?php echo $config['site_url'] ?>auth/logout.php><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
         </li>
         <!-- user login dropdown end -->
