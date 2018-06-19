@@ -1,7 +1,8 @@
 <?php
 session_start();
 
- include '../config/config.php' ?>
+ include '../config/config.php'
+ require_once '../config/koneksi.php' ?>
 
 
 <!DOCTYPE html>

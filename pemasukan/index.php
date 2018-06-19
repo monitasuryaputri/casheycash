@@ -1,6 +1,7 @@
 <?php 
 session_start();
-include '../config/config.php' ?>
+include '../config/config.php'
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,11 +68,16 @@ include '../config/config.php' ?>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php 
+    $q = "SELECT Id_pemasukan, sumber, nominal, time FROM pemasukan WHERE email='".$_SESSION['login_user']."' order by Id_pemasukan desc";
+    $query = mysqli_query($link, $q);
+    while ($rs = mysqli_fetch_array ($query)) {
+        ?>
                                         <tr>
-                                            <td>1.</td>
-                                            <td>Uang jajan</td>
-                                            <td>Rp. 100.000</td>
-                                            <td>01 Januari 2018</td>
+                                            <td><?php echo $rs['Id_pemasuka']; ?></td>
+                                            <td><?php echo $rs['sumber']; ?></td>
+                                            <td><?php echo $rs['nominal']; ?></td>
+                                            <td><?php echo $rs['time']; ?></td>
                                             <td>
                                             <div class="btn-group btn-group-justified">
                                                 <a href="#" class="btn btn-primary">Edit</a>
@@ -79,6 +85,9 @@ include '../config/config.php' ?>
                                             </div>
                                             </td>
                                         </tr>
+                                        <?php
+    }
+    ?>
                                     </tbody>
                                 </table>
                             </div>
