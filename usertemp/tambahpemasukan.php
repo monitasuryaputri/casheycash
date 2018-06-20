@@ -16,7 +16,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--css-->
 <?php include '../includes/user1/css.php' ?>
 <!--css-->
-<script src="js/jquery2.0.3.min.js"></script>
+<script src="<?php echo $config['site_url'] ?>assets/user1/js/jquery2.0.3.min.js"></script>
 </head>
 <body>
 <section id="container">
