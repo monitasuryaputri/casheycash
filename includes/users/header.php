@@ -22,7 +22,9 @@
                 <li class="nav-item active"><a class="nav-link" href="<?php echo $config['site_url'] ?>">Home</a></li>
                 <li class="nav-item active"><a class="nav-link" href="<?php echo $config['site_url'] ?>">Review</a></li>
                 <li class="nav-item"><a  href="<?php echo $config['site_url'] ?>blog">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="<?php echo $config['site_url'] ?>auth">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo $config['site_url'] ?>auth/pilihlogin.php">Login</a></li>
+
+               
                 <li class="nav-item"><a class="nav-link" href="<?php echo $config['site_url'] ?>auth/register.php">Register</a></li>
             </ul>
             <ul class="navbar-nav justify-content-end">

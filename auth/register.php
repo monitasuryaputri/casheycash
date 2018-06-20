@@ -38,7 +38,7 @@
 
       <link rel="icon" href="<?php echo $config['site_url'] ?>assets/users/img/Group 1.png" type="image/x-icon" />
 
-    <?php include '../includes/admin/css.php' ?>
+    <?php include '../includes/admin1/css.php' ?>
 
 </head>
 
@@ -95,7 +95,7 @@
 
     </div>
     <!-- End Wrapper -->
-    <?php include '../includes/admin/js.php' ?>
+    <?php include '../includes/admin1/js.php' ?>
 
 </body>
     
