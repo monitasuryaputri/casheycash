@@ -16,7 +16,7 @@
 <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link rel="icon" href="<?php echo $config['site_url'] ?>assets/users/img/Group 1.png" type="image/x-icon" />
+
 <!--css-->
     <?php include '../includes/user1/css.php' ?>
 <!--css-->
@@ -71,8 +71,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <td><?php echo $rs['time']; ?></td>
                                             <td>
                                             <div class="btn-group btn-group-justified">
-                                                <a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
+                                                <a href="edit_pemasukan.php?Id_pemasukan=<?php echo $rs['Id_pemasukan'] ?>" class="btn btn-primary">Edit</a>
+                                                <a onclick="return confirm('Are you sure you want to delete this entry?')" href="delete_pemasukan.php?Id_pemasukan=<?php echo $rs['Id_pemasukan'] ?>" class="btn btn-danger">Delete</a>
                                             </div>
                                             </td>
                                         </tr>
@@ -96,7 +96,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
 </div>
 </section>
-<?php include '../includes/user1/footer.php' ?>
+ <!-- footer -->
+		  <div class="footer">
+			<div class="wthree-copyright">
+			  <p>© 2017 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			</div>
+		  </div>
+  <!-- / footer -->
 </section>
 
 <!--main content end-->
