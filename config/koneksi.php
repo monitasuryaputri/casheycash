@@ -1,6 +1,4 @@
 <?php
-
-session_start($link);
 	$dbhost="localhost";
 	$dbuser="root";
 	$dbpass="";

@@ -31,8 +31,19 @@
                         <li><a href="tambah-pengeluaran.php">Tambah Pengeluaran</a></li>
                     </ul>
                 </li>
-               
-            </ul>            </div>
+                <li>
+                    <a class="sub-menu" href="<?php echo $config['site_url']?>usertemp/grafikfix.php">
+                        <i class="ffa fa-th"></i>
+                        <span>Grafik</span>
+                    </a>
+                </li>
+            </ul>    
+            
+            
+            <!-- <li>
+                   
+                </li> -->
+        </div>
         <!-- sidebar menu end-->
         
     </div>

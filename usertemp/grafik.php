@@ -2,7 +2,7 @@
   session_start();
   include '../config/config.php'; 
   require '../config/koneksi.php';
-$con = mysqli_connect("localhost", "root", "", "casheycash");
+//$con = mysqli_connect("localhost", "root", "", "casheycash");
   function date_str($date)
   {
     $exp = explode('-',$date);
@@ -16,10 +16,11 @@ $con = mysqli_connect("localhost", "root", "", "casheycash");
   //$email = $_SESSION["email"];
   //echo $email;
    $email = "sitialifah303@gmail.com";
-   mysqli_query($con,"SELECT * FROM pemasukan WHERE email='$email'");
+   $hasil = mysqli_query($link,"SELECT * FROM pemasukan WHERE email='$email'");
+   //die();
 //   $cek = "SELECT * FROM pemasukan WHERE email='$email'";
   $index =0;
-  $hasil = mysqli_query($cek);
+  //$hasil = mysqli_query($cek);
   // $jsonArray = array();
   while ($result = mysqli_fetch_array($hasil)) {
     $tanggal = $result['time'];
@@ -81,10 +82,10 @@ $con = mysqli_connect("localhost", "root", "", "casheycash");
     $index++;
   }
   $pengeluaranfix = array(0,0,0,0,0,0,0,0,0,0,0,0);
-  $cek = "SELECT * FROM pengeluaran WHERE email='$email'";
+  //$cek = "SELECT * FROM pengeluaran WHERE email='$email'";
+  $hasil = mysqli_query($link,"SELECT * FROM pengeluaran WHERE email='$email'");
   $index_p =0;
-  $hasil = mysql_query($cek);
-  while ($result = mysql_fetch_array($hasil)) {
+  while ($result = mysqli_fetch_array($hasil)) {
     $tanggal = $result['time'];
     $x[$index_p] = date('M/Y', strtotime($tanggal));
     $pengeluaran[$index_p] = $result['nominal'];
@@ -126,7 +127,6 @@ $con = mysqli_connect("localhost", "root", "", "casheycash");
       $pengeluaranfix[11]=$pengeluaranfix[11]+$pengeluaran[$index_p];
     }
   }
-  echo $pengeluaranfix[6];
    ?>
 
   

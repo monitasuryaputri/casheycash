@@ -6,14 +6,14 @@
         $result = mysqli_query($link, "SELECT * FROM users");
     
          //query berikut akan jalan jika button Ubah Password diklik
-         if(isset($_POST['ubah'])){
+         if(isset($_POST['reset'])){ // name yang di cek disini tadi itu ubah, sedangkan ubah ngga ada di set di formnya jadinya ngga di temukan
             $errors = 0;
              //memasukkan data yang diinput kedalam masing-masing variabel
-            $nama= mysqli_real_escape_string($link,$_POST['nama']);
+            // $nama= mysqli_real_escape_string($link,$_POST['nama']);
             $email= mysqli_real_escape_string($link,$_POST['email']);
             $passwordlama = mysqli_real_escape_string($link,$_POST['passwordlama']);
             $passwordbaru= mysqli_real_escape_string($link,$_POST['passwordbaru']);
-            $ubahpassword= mysqli_real_escape_string($link,$_POST['ubahpassword']);
+            $ubahpassword= mysqli_real_escape_string($link,$_POST['confirmpassword']);
             
          //pastikan form diisi
          $cek=mysqli_query($link,"select password from users where email='$email'");
@@ -23,7 +23,7 @@
            return;
          }
 
-        if($passwordbaru != $confirmpassword){
+        if($passwordbaru != $ubahpassword){
             ++$errors;
             echo "Password tidak cocok !!!<br>";
         }
@@ -50,7 +50,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--css-->
     <?php include '../includes/user1/css.php' ?>
 <!--css-->
-<script src="js/jquery2.0.3.min.js"></script>
+
+<script src="<?php echo $config['site_url'] ?>assets/user1/js/jquery2.0.3.min.js"></script>
 </head>
 <body>
 
