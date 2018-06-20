@@ -1,8 +1,22 @@
-<!-- Favicon icon -->
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-<title>CasheyCash</title>
-<!-- Bootstrap Core CSS -->
-<link href="<?php echo $config['site_url']?>assets/admin/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
-<!-- Custom CSS -->
-<link href="<?php echo $config['site_url']?>assets/admin/css/helper.css" rel="stylesheet">
-<link href="<?php echo $config['site_url']?>assets/admin/css/style.css" rel="stylesheet">
+   
+   <link rel="icon" href="<?php echo $config['site_url'] ?>assets/users/img/Group 1.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="<?php echo $config['site_url'] ?>assets/admin/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="<?php echo $config['site_url'] ?>assets/admin/plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="<?php echo $config['site_url'] ?>assets/admin/plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="<?php echo $config['site_url'] ?>assets/admin/css/style.css" rel="stylesheet">
+
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="<?php echo $config['site_url'] ?>assets/admin/css/themes/all-themes.css" rel="stylesheet" />

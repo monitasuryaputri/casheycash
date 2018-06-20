@@ -9,15 +9,18 @@ if (isset($_POST['submit'])){
   $email = htmlentities(strip_tags($_POST['email']));
   $password = md5(htmlentities(strip_tags($_POST['password'])));
 
-  $sql = "SELECT *FROM users WHERE email ='$email' and password ='$password'";
+  $sql = "SELECT *FROM users WHERE email ='$email' and password ='$password' ";
 
   $data = mysqli_query($link,$sql);
 
   if (mysqli_num_rows($data)>0){
     $data = mysqli_fetch_assoc($data);
     $_SESSION['nama_user'] = $data['nama'];
+    $_SESSION['level_akses'] = $data['Id_level_akses'];
     $_SESSION['login_user'] = $email;
-    header('Location:../usertemp/index.php');
+    if($data['Id_level_akses'] == 1){
+    header('Location:../admin/index.html');
+    }
   }
   else{
  echo   $alert ="email atau password salah.";
@@ -67,7 +70,7 @@ if (isset($_POST['submit'])){
                     <div class="col-lg-4">
                         <div class="login-content card">
                             <div class="login-form">
-                                <h2><b><center>LOGIN USER</center><b></h2>
+                                <h2><b><center>LOGIN ADMIN</center><b></h2>
                                 <br>
                                 <br>
                                 <form method="post">
@@ -89,9 +92,7 @@ if (isset($_POST['submit'])){
 
                                     </div>-->
                                     <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30" name='submit'>Login</button>
-                                    <div class="register-link m-t-15 text-center">
-                                        <p>Don't have account ? <a href="<?php echo $config['site_url'] ?>auth/register.php"> Register Here</a></p>
-                                    </div>
+                                   
                                 </form>
                             </div>
                         </div>

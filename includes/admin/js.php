@@ -1,13 +1,21 @@
-<!-- All Jquery -->
-<script src="<?php echo $config['site_url']?>assets/admin/js/lib/jquery/jquery.min.js"></script>
-<!-- Bootstrap tether Core JavaScript -->
-<script src="<?php echo $config['site_url']?>assets/admin/js/lib/bootstrap/js/popper.min.js"></script>
-<script src="<?php echo $config['site_url']?>assets/admin/js/lib/bootstrap/js/bootstrap.min.js"></script>
-<!-- slimscrollbar scrollbar JavaScript -->
-<script src="<?php echo $config['site_url']?>assets/admin/js/jquery.slimscroll.js"></script>
-<!--Menu sidebar -->
-<script src="<?php echo $config['site_url']?>assets/admin/js/sidebarmenu.js"></script>
-<!--stickey kit -->
-<script src="<?php echo $config['site_url']?>assets/admin/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
-<!--Custom JavaScript -->
-<script src="<?php echo $config['site_url']?>assets/admin/js/custom.min.js"></script>
+
+ <!-- Jquery Core Js -->
+ <script src="<?php echo $config['site_url']?>assets/admin/plugins/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core Js -->
+<script src="<?php echo $config['site_url']?>assets/admin/plugins/bootstrap/js/bootstrap.js"></script>
+
+<!-- Waves Effect Plugin Js -->
+<script src="<?php echo $config['site_url']?>assets/admin/plugins/node-waves/waves.js"></script>
+
+<!-- Validation Plugin Js -->
+<script src="<?php echo $config['site_url']?>assets/admin/plugins/jquery-validation/jquery.validate.js"></script>
+
+<!-- Custom Js -->
+<script src="<?php echo $config['site_url']?>assets/admin/js/admin.js"></script>
+<script src="<?php echo $config['site_url']?>assets/admin/js/pages/examples/sign-in.js"></script>
+
+
+
+
+

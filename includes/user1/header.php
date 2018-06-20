@@ -1,6 +1,11 @@
 <?php 
 
-    session_start();
+   
+
+    if(!isset($_COOKIE["PHPSESSID"]))
+    {
+        session_start();
+    }
 
     include '../config/config.php';
     require_once "../config/koneksi.php";
@@ -203,14 +208,14 @@
         <!-- user login dropdown start-->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="images/4.png">
+                <img alt="" src="<?php echo $config['site_url'] ?>assets/user1/images/1.png">
                 <span class="username"><?php echo $_SESSION['nama_user']; ?></span>
                 <b class="caret"></b>
                 
             </a>
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <li><a href=<?php echo $config['site_url'] ?>usertemp/ubahpassword.php><i class="fa fa-cog"></i> Ganti Password</a></li>
                 <li><a href=<?php echo $config['site_url'] ?>auth/logout.php><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
         </li>
@@ -219,4 +224,5 @@
     </ul>
     <!--search & user info end-->
 </div>
+
 </header>
