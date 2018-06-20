@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         "sorting": {
           "enabled": true
         }}'>
-        
+        <br>
                <!-- Container fluid  -->
                <div class="container-fluid">
                 <!-- Start Page Content -->
@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <div class="row">
                                                 <label class="col-sm-2 control-label">Nominal</label>
                                                 <div class="col-sm-10">
-                                                    <div class="input-group">
+                                                    <div >
                                                         <span class="input-group-btn">Rp</span>
                                                         <input type="text" placeholder="Search Round" name="nominal" class="form-control">
                                                     </div>

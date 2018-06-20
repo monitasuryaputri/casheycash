@@ -63,8 +63,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     $nominal=$_POST['nominal'];
                     $Id_kategori=$_POST['Id_kategori'];
                     $time = $_POST['time'];
-    $time = str_replace('/', '-', $time);
-    $time = date('Y-m-d', strtotime($time));
+                    $time = str_replace('/', '-', $time);
+                    $time = date('Y-m-d', strtotime($time));
                 
                 $sql = "INSERT INTO pengeluaran(Id_pengeluaran, email, keperluan, nominal, Id_kategori, time) VALUES (DEFAULT, '".$_SESSION['login_user']."', '$keperluan','$nominal','$Id_kategori','$time' )";
                 $status = $link->query($sql) or die("menu" . mysqli_error($link));
